@@ -66,14 +66,12 @@
 
     <section id="instagram-feed" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">El CEHCE en Instagram</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/fc154c4ee8865388a03138b68f9c3a0d.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-                </div>
-            </div>
+          <h2 class="text-center mb-4">Instagram Feed</h2>
+          <div class="row" id="instagram-feed-container">
+            <!-- Instagram feed will be dynamically inserted here -->
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- organismos Section -->
     <section id="organismos" class="bg-light py-5">
@@ -159,7 +157,7 @@
                     </form>
                 </div>
                 <div class="col-md-6">
-                    <h5>Informacioón de contacto</h5>
+                    <h5>Información de contacto</h5>
                     <p>Phone: 123-456-7890</p>
                     <p>Email: info@example.com</p>
                     <p>Av. Uruguay 1695, Montevideo</p>
@@ -172,7 +170,59 @@
     <footer class="text-center py-3">
         <p>&copy; 2023 Student Organization. All rights reserved.</p>
     </footer>
-
+    <script>
+        // Replace 'ACCESS_TOKEN' with your Instagram API access token
+        const accessToken = 'b6691ba7333b1c82bd71d3f60305ea63';
+    
+        // Replace 'USERNAME' with your Instagram username
+        const username = 'cehce.feuu';
+    
+        // Number of photos to fetch from the Instagram API
+        const count = 9;
+    
+        // Instagram API URL
+        const apiUrl = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}&count=${count}`;
+    
+        // Fetch Instagram photos
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+            const feedContainer = document.getElementById('instagram-feed-container');
+    
+            // Loop through the retrieved photos and create HTML elements
+            data.data.forEach(photo => {
+              const imageSrc = photo.images.standard_resolution.url;
+              const link = photo.link;
+    
+              // Create a new 'div' element for each photo
+              const div = document.createElement('div');
+              div.className = 'col-md-4 mb-4';
+    
+              // Create an 'a' element with the image and link
+              const a = document.createElement('a');
+              a.href = link;
+              a.target = '_blank';
+    
+              // Create an 'img' element for the photo
+              const img = document.createElement('img');
+              img.src = imageSrc;
+              img.alt = 'Instagram Photo';
+              img.className = 'img-fluid';
+    
+              // Append the 'img' element to the 'a' element
+              a.appendChild(img);
+    
+              // Append the 'a' element to the 'div' element
+              div.appendChild(a);
+    
+              // Append the 'div' element to the feed container
+              feedContainer.appendChild(div);
+            });
+          })
+          .catch(error => {
+            console.error('Error fetching Instagram photos:', error);
+          });
+      </script>
 </body>
 
 </html>
