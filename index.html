@@ -8,13 +8,34 @@
     <title>CEHCE - ASCEEP - FEUU</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+    <style>
+        :root {
+          --primary-color: blue;
+          --secondary-color: red;
+        }
+    
+  
+    
+        .btn-primary {
+          background-color: var(--primary-color);
+          border-color: var(--primary-color);
+        }
+    
+        .btn-secondary {
+          background-color: var(--secondary-color);
+          border-color: var(--secondary-color);
+        }
+      </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">CEHCE - ASCEEP - FEUU</a>
+            <a class="navbar-brand" href="#">
+                <img src="public/img/lgyc.png"  height="100" alt="" style="mix-blend-mode: multiply;">
+              </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,13 +43,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about">Redes sociales</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#events">Events</a>
+                    <a class="nav-link" href="#organismos">Organismos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -37,69 +58,15 @@
 
     <!-- Hero Section -->
     <section class="jumbotron text-center py-5">
-        <h1 class="display-4">Welcome to our Student Organization</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget semper turpis.</p>
-        <a href="#about" class="btn btn-primary">Learn More</a>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget semper turpis. Etiam
-                        pellentesque ipsum eget est tristique, vitae rutrum mi rutrum. Quisque posuere arcu sed pharetra
-                        congue.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="path/to/about-image.jpg" alt="About Image" class="img-fluid">
-                </div>
-            </div>
-        </div>
+        <h1 class="display-4">Sitio web en construcción</h1>
+        <p class="lead">Hay muchos elementos provisorios y/o con errores.</p>
+        <a href="#about" class="btn btn-primary">Ver redes sociales</a>
     </section>
 
-    <!-- Events Section -->
-    <section id="events" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Upcoming Events</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="path/to/event-image.jpg" class="card-img-top" alt="Event Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-primary">Register</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="path/to/event-image.jpg" class="card-img-top" alt="Event Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-primary">Register</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="path/to/event-image.jpg" class="card-img-top" alt="Event Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-primary">Register</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="instagram-feed" class="py-5">
         <div class="container">
-          <h2 class="text-center mb-4">Instagram Feed</h2>
+          <h2 class="text-center mb-4">Publicaciones en Instagram</h2>
           <div class="row">
             <div class="col-md-12">
               <!-- LightWidget Embed Code -->
@@ -110,10 +77,71 @@
         </div>
       </section>
 
+    <!-- organismos Section -->
+    <section id="organismos" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Organismos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="400px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Asamblea general</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="400px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mesa Coordinadora</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Asuntos gremiales</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Organización</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Finanzas</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Contact Us</h2>
+            <h2 class="text-center mb-4">Contactanos</h2>
             <div class="row">
                 <div class="col-md-6">
                     <form>
@@ -133,10 +161,10 @@
                     </form>
                 </div>
                 <div class="col-md-6">
-                    <h5>Contact Information</h5>
+                    <h5>Informacioón de contacto</h5>
                     <p>Phone: 123-456-7890</p>
                     <p>Email: info@example.com</p>
-                    <p>Address: 123 Main St, City, State</p>
+                    <p>Av. Uruguay 1695, Montevideo</p>
                 </div>
             </div>
         </div>
