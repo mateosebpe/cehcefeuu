@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Archivo1.pdf",
+      "size": "2.5 MB",
+      "url": "path/to/archivo1.pdf"
+    },
+    {
+      "name": "Archivo2.pdf",
+      "size": "1.8 MB",
+      "url": "path/to/archivo2.pdf"
+    },
+    {
+      "name": "Archivo3.pdf",
+      "size": "3.2 MB",
+      "url": "path/to/archivo3.pdf"
+    }
+  ]
+  
