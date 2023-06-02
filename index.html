@@ -15,7 +15,10 @@
             --secondary-color: #2e2660;
         }
 
-
+        .card>img {
+            object-fit: cover;
+            object-position: middle;
+        }
 
         .btn-primary {
             background-color: var(--primary-color);
@@ -63,10 +66,7 @@
         <a href="https://linktr.ee/cehcefeuu" class="btn btn-primary">Ver redes sociales</a>
     </section>
 
-    <!-- Button to Open Modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Abrir Modal
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -120,7 +120,11 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Asamblea general</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
+                            <!-- Button to Open Modal -->
+                            <button type="button" onclick="loadModal('public/json/asambleageneral.json')" class="btn btn-primary"
+                                data-toggle="modal" data-target="#exampleModal">
+                                Ver resoluciones
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -137,7 +141,8 @@
                 <h2 class="text-center mb-4">Comisiones</h2>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="200px">
+                        <img src="public/img/organismos/asuntos gremiales.jpeg" class="card-img-top" alt="Event Image"
+                            height="250px">
                         <div class="card-body">
                             <h5 class="card-title">Asuntos gremiales</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -147,7 +152,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="200px">
+                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="250px">
                         <div class="card-body">
                             <h5 class="card-title">Organización</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -157,9 +162,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="public/img/fachada_cehce.png" class="card-img-top" alt="Event Image" height="200px">
+                        <img src="public/img/organismos/cultura.jpg" class="card-img-top" alt="Event Image"
+                            height="250px">
                         <div class="card-body">
-                            <h5 class="card-title">Finanzas</h5>
+                            <h5 class="card-title">Cultura</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="#" class="btn btn-primary">Register</a>
                         </div>
@@ -205,7 +211,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-3">
-        <p>&copy; 2023 Student Organization. All rights reserved.</p>
+        <p>&copy; 2023 CEHCE. All rights reserved.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
