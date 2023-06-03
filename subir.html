@@ -30,7 +30,15 @@
                 <div class="card me-2 p-4">
                     <h3>Agregar actas</h3>
                     <input type="file" id="fileInput" accept=".pdf" required>
-                    <select name="" id="fileCategory">
+                    <button type="button" onclick="uploadFile()">Guardar</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-md-12 card p-4 my-4">
+                <h3 class="text-center">Ver y editar actas</h3>
+                <form>
+                    <select name="" id="downloadCategory">
                         <option value="pdfs/asambleageneral/">Asamblea General</option>
                         <option value="pdfs/mesacoordinadora/">Mesa Coordinadora</option>
                         <option value="pdfs/actasyarchivos/">Actas y archivos</option>
@@ -43,13 +51,8 @@
                         <option value="pdfs/organizacion/">Organización</option>
                         <option value="pdfs/prensaypropaganda/">Prensa y propaganda</option>
                     </select>
-                    <button type="button" onclick="uploadFile()">Guardar</button>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <div class="col-md-12 card p-4 my-4">
-                <h3 class="text-center">Ver y editar actas</h3>
+                    <button type="button" onclick="bajarStorage()">Guardar</button>
+                </form>
             </div>
         </div>
     </div>
@@ -84,12 +87,10 @@
                         loginForm.innerHTML = '<p>Has iniciado sesión ' + user.email + '</p>';
                     } else {
                         console.log('Ningún usuario logeado');
-
                     }
                 });
             }
-
-
+            
             // Obtiene los valores de los campos de correo electrónico y contraseña
             const email = document.getElementById('emailInput').value;
             const password = document.getElementById('passwordInput').value;
@@ -111,7 +112,8 @@
                 });
         });
     </script>
-    <script src="public/scripts/subir.js"></script>
+    <script src="public/scripts/storageSubir.js"></script>
+    <script src="public/scripts/storageBajar.js"></script>
 </body>
 
 </html>
