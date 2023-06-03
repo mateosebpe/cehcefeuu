@@ -1,21 +1,23 @@
-const uploadFile =  (async ()=> {
+checkLoggedInUser();
+
+
+function uploadFile() {
     var fileInput = document.getElementById('fileInput');
     var file = fileInput.files[0];
+    var fileCategory = document.getElementById('fileCategory');
 
     if (file) {
-        const formData = new FormData();
-        formData.append('myimage.pdf', file);
+        var storageRef = firebase.storage().ref();
+        var fileRef = storageRef.child(fileCategory.value).child(file.name);
 
-        // Post the form, just make sure to set the 'Content-Type' header
-        const res = await axios.post('/upload', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        });
-
-        // Aquí puedes mostrar una notificación o realizar otras acciones después de guardar el archivo
-        alert('El archivo se ha guardado correctamente.');
+        fileRef.put(file)
+            .then(function (snapshot) {
+                alert('El archivo se ha guardado correctamente.');
+            })
+            .catch(function (error) {
+                alert('Error al cargar el archivo: ' + error.message);
+            });
     } else {
         alert('No se ha seleccionado ningún archivo.');
     }
-});
+}
