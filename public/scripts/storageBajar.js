@@ -19,7 +19,7 @@ function downloadFile() {
                 filesInHTML += `<div class="list-group-item d-flex w-100 justify-content-between" p-2 my-2">
             <h5 class="w-100">${fileRef.name}</h5>
             <a href="${downloadURL}" class="mx-4">Ver</a>
-            <button class="btn btn-outline-primary btn-sm" onclick="deleteFileStorage('${encodeURIComponent(fileRef.fullPath)}')">Eliminar</button>
+            <button class="btn btn-outline-primary btn-sm" onclick="deleteFileStorage('${encodeURI(fileRef.fullPath)}')">Eliminar</button>
         </div>`;
                 console.log(filesInHTML);
                 let viewList = document.getElementById('viewFiles');
