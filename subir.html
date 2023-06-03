@@ -51,10 +51,10 @@
                         <option value="pdfs/organizacion/">Organización</option>
                         <option value="pdfs/prensaypropaganda/">Prensa y propaganda</option>
                     </select>
-                    <button type="button" onclick="bajarStorage()">Refrescar</button>
+                    <button type="button" onclick="downloadFile()">Refrescar</button>
                 </form>
                 <div id="viewFiles" class="list-group mt-4">
-                    
+
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                     }
                 });
             }
-            
+
             // Obtiene los valores de los campos de correo electrónico y contraseña
             const email = document.getElementById('emailInput').value;
             const password = document.getElementById('passwordInput').value;
@@ -117,6 +117,7 @@
     </script>
     <script src="public/scripts/storageSubir.js"></script>
     <script src="public/scripts/storageBajar.js"></script>
+    <script src="public/scripts/deleteFile.js"></script>
 </body>
 
 </html>

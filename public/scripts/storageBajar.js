@@ -1,4 +1,4 @@
-function bajarStorage() {
+function downloadFile() {
     var fileCategory = document.getElementById('downloadCategory').value;
     var filesInHTML = ``;
     // Obtén una referencia al almacenamiento de Firebase
@@ -15,25 +15,23 @@ function bajarStorage() {
 
             // Obtiene la URL de descarga del archivo
             fileRef.getDownloadURL().then(function (downloadURL) {
-                console.log('Nombre del archivo:', fileName);
-                console.log('URL de descarga:', downloadURL);
                 // Realiza aquí las acciones correspondientes con el archivo
                 filesInHTML += `<div class="list-group-item d-flex w-100 justify-content-between" p-2 my-2">
             <h5 class="w-100">${fileRef.name}</h5>
             <a href="${downloadURL}" class="mx-4">Ver</a>
-            <button class="btn btn-outline-primary btn-sm">Eliminar</button>
+            <button class="btn btn-outline-primary btn-sm" onclick="deleteFileStorage('${encodeURIComponent(fileRef.fullPath)}')">Eliminar</button>
         </div>`;
-        console.log(filesInHTML);
-        let viewList = document.getElementById('viewFiles');
-        viewList.innerHTML = filesInHTML;
+                console.log(filesInHTML);
+                let viewList = document.getElementById('viewFiles');
+                viewList.innerHTML = filesInHTML;
             });
 
-            
+
         });
     }).catch(function (error) {
         // Se ejecuta si hay un error al obtener la lista de archivos
         console.log('Error al obtener la lista de archivos:', error);
     });
-    
+
 
 }
